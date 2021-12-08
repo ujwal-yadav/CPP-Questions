@@ -1,0 +1,27 @@
+#include "bits/stdc++.h"
+using namespace std;
+
+void solve(string &in, int len, vector<string> &ans)
+{
+    if (len == in.size())
+    {
+        ans.push_back(in);
+        return;
+    }
+    string in1 = in, in2 = in;
+    in1.push_back('H');
+    in2.push_back('T');
+    solve(in1, len, ans);
+    solve(in2, len, ans);
+}
+int main()
+{
+    int n;
+    cin >> n;
+    vector<string> ans;
+    string s;
+    solve(s, n, ans);
+    for (auto &x : ans)
+        cout << x << "\n";
+    return 0;
+}
