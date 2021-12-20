@@ -3,7 +3,6 @@ public:
     string decodeString(string s) {
         int n=0;
         string m;
-        string x;
         stack<string> alpha;
         stack<int> digit;
         for(int i=0;i<s.length();i++){
